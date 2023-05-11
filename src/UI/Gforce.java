@@ -14,7 +14,7 @@ public class Gforce {
         
       // Code to cALc Potential Energy by bola
         
-    // Define the calculatePotentialEnergy method
+    // Define the calculatePotentialEnergy method.
     public static double calculatePotentialEnergy(double m, double h) {
         double g = 9.81;
         return m * g * h;
