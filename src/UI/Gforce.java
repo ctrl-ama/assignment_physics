@@ -1,6 +1,8 @@
+package UI;
+
 public class Gforce {
 
-        public static double calculateForce( double mass){
+        public static double calculateForce(float v, float mass){
             double g = 9.81;
             return mass *g;
         }

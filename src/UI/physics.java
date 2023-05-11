@@ -1,3 +1,5 @@
+package UI;
+
 public class physics {
 
         float multiply (float numberOne, float numberTwo, float numberThree){
