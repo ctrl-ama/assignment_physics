@@ -2,15 +2,15 @@ package UI;
 
 public class physics {
 
-        float multiply (float numberOne, float numberTwo, float numberThree){
+         public double multiply (float numberOne, float numberTwo, float numberThree){
             return numberOne * numberTwo * numberThree;
         }
-        float divide (float numberOne , float numberTwo){
+     //    public float divide (float numberOne , float numberTwo){
 
-            return numberOne / numberTwo;
+      //      return numberOne / numberTwo;
         }
 
-    }
+
 
 
 

@@ -2,9 +2,9 @@ package UI;
 
 public class Gforce {
 
-        public static double calculateForce(float v, float mass){
-            double g = 9.81;
-            return mass *g;
+        public static double calculateForce(double m, float v){
+            double g= 9.81;
+            return (float) (m *g);
         }
 
         public static double calculateEscapeVelocity (float gravity,float mass, float radius){
@@ -23,7 +23,7 @@ public class Gforce {
 
 
 
-    }
+
 
 
 
