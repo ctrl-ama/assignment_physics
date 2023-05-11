@@ -1,3 +1,7 @@
+package UI;
+
+import UI.PotentialEnergy;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +16,8 @@ public class Main {
         System.out.print("Enter the height of the object in meters: ");
         double h = input.nextDouble();
 
-        // Calculate potential energy using the PotentialEnergy class
+        // Calculate potential energy using the UI.PotentialEnergy class
+
         double PE = PotentialEnergy.calculatePotentialEnergy(m, h);
 
         // Output result

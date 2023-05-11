@@ -1,4 +1,6 @@
-// Define the PotentialEnergy class
+package UI;
+
+// Define the UI.PotentialEnergy class
 public class PotentialEnergy {
     // Define the calculatePotentialEnergy method
     public static double calculatePotentialEnergy(double m, double h) {
