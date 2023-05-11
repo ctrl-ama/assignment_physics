@@ -10,7 +10,7 @@ public class Gforce {
             return (float) Math.sqrt(2*gravity* mass *radius);
         }
         
-      // Code to cALc Potential Energy
+      // Code to cALc Potential Energy by bola
         
     // Define the calculatePotentialEnergy method
     public static double calculatePotentialEnergy(double m, double h) {
