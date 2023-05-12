@@ -2,9 +2,9 @@ package UI;
 
 public class physics {
 
-    public double multiply (double numberOne, double numberTwo){
+    public double multiply (double numberOne, double numberTwo, double numberThree){
         double g = 9.8;
-        return numberOne * numberTwo;
+        return numberOne * numberTwo * numberThree;
     }
 
 }
