@@ -8,10 +8,10 @@ import java.awt.Color;
 
 
 public class PhysicsUI {
-    JFrame frame = new JFrame("window");
+    JFrame frame = new JFrame("Assignment");
 
 
-    JButton energy = new JButton("PHYSICS WORKS");
+    JButton energy = new JButton("PHYSICS FORMUlA'S");
 
 
     JLabel text = new JLabel("GET READY TO CALCULATE");
