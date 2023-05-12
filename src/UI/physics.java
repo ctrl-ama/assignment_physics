@@ -2,6 +2,8 @@ package UI;
 
 public class physics {
 
+//THIS CALCULATES ALL THE PHYSICS FORMULAS
+
          public double multiply (float numberOne, float numberTwo, float numberThree){
             return numberOne * numberTwo * numberThree;
         }

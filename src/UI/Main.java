@@ -1,6 +1,8 @@
 package UI;
 
 import java.util.Scanner;
+import UI.Gforce;
+
 public class Main {
 
     public static void main(String[] args){
@@ -25,6 +27,13 @@ public class Main {
         // output result
 
  //       System.out.print("The force is" + Force+"N");
+
+        System.out.print("Enter the mass of the object in kg: ");
+        double m = input.nextDouble();
+
+        System.out.print("Enter the height of the object in meters: ");
+        double h = input.nextDouble();
+
 
 
     }
