@@ -65,6 +65,7 @@ public class PhysicsUI {
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 Gforce myObj = new Gforce();
                 float answer = (float) myObj.calculateForce(Float.parseFloat(textField2.getText()),Float.parseFloat(textField3.getText()));
                 JOptionPane.showMessageDialog(null, answer);
@@ -73,7 +74,52 @@ public class PhysicsUI {
         });
 
 
+        public void MainUI3() {
+
+            JButton potentialEnergyButton = new JButton("Calculate Potential Energy");
+            JFrame frame3 = new JFrame("Calculate Potential Energy");
+            JLabel text4 = new JLabel("Enter mass (in kg)");
+            JLabel text5 = new JLabel("Enter mass (in kg)");
+            JLabel text6 = new JLabel("Enter height (in m)");
+            JTextField massField = new JTextField();
+            JTextField gravityField = new JTextField();
+            JTextField heightField = new JTextField();
+            JButton calculateButton = new JButton("Calculate");
+
+            frame3.setLayout(new GridLayout(3, 2));
+            frame3.add(text4);
+            frame3.add(massField);
+            frame3.add(text5);
+            frame3.add(heightField);
+            frame3.add(text6);
+            frame3.add(gravityField);
+            frame3.add(calculateButton);
+
+
+            frame2.setSize(300, 150);
+            frame2.setVisible(true);
+            // Existing code...
+
+
+            frame.add(potentialEnergyButton);
+
+            calculateButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Parse mass and height values from text fields
+                    double mass = Double.parseDouble(massField.getText());
+                    double height = Double.parseDouble(heightField.getText());
+                    double gravity = Double.parseDouble(gravityField.getText());
+
+                    // Calculate potential energy using constant gravity
+                    double potentialEnergy = mass * gravity * height;
+                    // Display the result
+                    JOptionPane.showMessageDialog(null, "The potential energy is " + potentialEnergy + " Joules");
+                }
+        });
+
     }
 
 
+}
 }
