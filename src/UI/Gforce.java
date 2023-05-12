@@ -15,7 +15,7 @@ public class Gforce {
         return m * g * h;
     }
 
-    static float calculatekineticEnergy(float m, float v) {
+    static float calculateKineticEnergy(float m, float v) {
         float k = 0.5f;
         return m * v*k;
     }

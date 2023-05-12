@@ -13,22 +13,23 @@ public class PhysicsUI {
 
     JButton energy = new JButton("FORCE");
 
-    JButton energy2= new JButton("POTENTIAL ENERGY");
+    JButton energy2 = new JButton("POTENTIAL ENERGY");
 
+    JButton energy3 = new JButton("KINETIC ENERGY");
     JLabel text = new JLabel("GET READY TO CALCULATE");
 
     JTextField textField = new JTextField();
+    private String calculateKineticEnergy;
 
 
-
-    public void MainUI(){
-        frame.setSize(250,400);
-        frame.setLayout(new GridLayout(3,1));
+    public void MainUI() {
+        frame.setSize(250, 400);
+        frame.setLayout(new GridLayout(3, 1));
         frame.setVisible(true);
 
         frame.add(energy);
         frame.add(energy2);
-
+        frame.add(energy3);
         frame.add(text);
         frame.add(textField);
 
@@ -42,11 +43,15 @@ public class PhysicsUI {
 
         energy2.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                MainUI3();
-            }
+            public void actionPerformed(ActionEvent e) {MainUI3();}
         });
+        energy3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainUI4();
+            }
 
+        });
     }
 
     public void MainUI2() {
@@ -83,7 +88,7 @@ public class PhysicsUI {
         });
     }
 
-        public void MainUI3() {
+    public void MainUI3() {
 
 
             JFrame frame3 = new JFrame("Calculate Potential Energy");
@@ -110,8 +115,6 @@ public class PhysicsUI {
             // Existing code...
 
 
-
-
             calculateButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -125,10 +128,54 @@ public class PhysicsUI {
                     // Display the result
                     JOptionPane.showMessageDialog(null, "The potential energy is " + potentialEnergy + " Joules");
                 }
+            });
+
+        }
+
+
+    public void mainUI4() {
+
+        JFrame frame4 = new JFrame("Window");
+
+        JLabel text7 = new JLabel("  ENTER mass:");
+        JLabel text8 = new JLabel("  ENTER velocity:");
+        JTextField textField7 = new JTextField();
+        JTextField textField8 = new JTextField();
+        JTextField textField9 = new JTextField();
+        JButton calculate2 = new JButton("calculate");
+
+
+        frame4.setSize(150, 200);
+        frame4.setLayout(new GridLayout(3, 1));
+        frame4.setVisible(true);
+
+
+        frame4.add(text7);
+        frame4.add(textField7);
+        frame4.add(text8);
+        frame4.add(textField8);
+        frame4.add(calculate2);
+
+
+        calculate2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Parse mass and height values from text fields
+                double mass = Double.parseDouble(textField7.getText());
+                double velocity = Double.parseDouble(textField8.getText());
+                double k = Double.parseDouble(textField9.getText());
+
+
+                // Calculate potential energy using constant gravity
+                double potentialEnergy = mass * velocity * k;
+                // Display the result
+
+                JOptionPane.showMessageDialog(null, "The kinetic energy is " + calculateKineticEnergy + " Joules");
+            }
+
+
         });
 
     }
-
-
 }
-
