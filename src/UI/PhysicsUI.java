@@ -4,10 +4,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 
 public class PhysicsUI {
     JFrame frame = new JFrame("window");
+
 
     JButton energy = new JButton("PHYSICS WORKS");
 
@@ -40,19 +42,23 @@ public class PhysicsUI {
     public void MainUI2(){
         JFrame frame2 = new JFrame("window ");
         JLabel text2 = new JLabel("Enter mass:");
-        JLabel text3 = new JLabel("Enter gravity");
+        JLabel text3 = new JLabel("Enter gravity:");
         JTextField textField2 = new JTextField();
         JTextField textField3 = new JTextField();
+
+
         JButton calculate = new JButton("Calculate");
 
-        frame2.setSize(150,200);
+        frame2.setSize(400,400);
         frame2.setLayout( new GridLayout(3,1));
         frame2.setVisible(true);
+
 
 
         frame2.add(text2);
         frame2.add(textField2);
         frame2.add(text3);
+        frame2.add(textField3);
         frame2.add(calculate);
 
 
