@@ -11,8 +11,9 @@ public class PhysicsUI {
     JFrame frame = new JFrame("Assignment");
 
 
-    JButton energy = new JButton("PHYSICS FORMUlA'S");
+    JButton energy = new JButton("FORCE");
 
+    JButton energy2= new JButton("POTENTIAL ENERGY");
 
     JLabel text = new JLabel("GET READY TO CALCULATE");
 
@@ -26,6 +27,7 @@ public class PhysicsUI {
         frame.setVisible(true);
 
         frame.add(energy);
+        frame.add(energy2);
 
         frame.add(text);
         frame.add(textField);
@@ -37,9 +39,17 @@ public class PhysicsUI {
                 MainUI2();
             }
         });
+
+        energy2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainUI3();
+            }
+        });
+
     }
 
-    public void MainUI2(){
+    public void MainUI2() {
         JFrame frame2 = new JFrame("window ");
         JLabel text2 = new JLabel("Enter mass:");
         JLabel text3 = new JLabel("Enter gravity:");
@@ -49,10 +59,9 @@ public class PhysicsUI {
 
         JButton calculate = new JButton("Calculate");
 
-        frame2.setSize(400,400);
-        frame2.setLayout( new GridLayout(3,1));
+        frame2.setSize(400, 400);
+        frame2.setLayout(new GridLayout(3, 1));
         frame2.setVisible(true);
-
 
 
         frame2.add(text2);
@@ -67,49 +76,49 @@ public class PhysicsUI {
             public void actionPerformed(ActionEvent e) {
 
                 Gforce myObj = new Gforce();
-                float answer = (float) myObj.calculateForce(Float.parseFloat(textField2.getText()),Float.parseFloat(textField3.getText()));
+                float answer = (float) myObj.calculateForce(Float.parseFloat(textField2.getText()), Float.parseFloat(textField3.getText()));
                 JOptionPane.showMessageDialog(null, answer);
 
             }
         });
-
+    }
 
         public void MainUI3() {
 
-            JButton potentialEnergyButton = new JButton("Calculate Potential Energy");
+
             JFrame frame3 = new JFrame("Calculate Potential Energy");
             JLabel text4 = new JLabel("Enter mass (in kg)");
             JLabel text5 = new JLabel("Enter mass (in kg)");
             JLabel text6 = new JLabel("Enter height (in m)");
-            JTextField massField = new JTextField();
-            JTextField gravityField = new JTextField();
-            JTextField heightField = new JTextField();
+            JTextField massField4 = new JTextField();
+            JTextField gravityField5 = new JTextField();
+            JTextField heightField6 = new JTextField();
             JButton calculateButton = new JButton("Calculate");
 
             frame3.setLayout(new GridLayout(3, 2));
             frame3.add(text4);
-            frame3.add(massField);
+            frame3.add(massField4);
             frame3.add(text5);
-            frame3.add(heightField);
+            frame3.add(heightField6);
             frame3.add(text6);
-            frame3.add(gravityField);
+            frame3.add(gravityField5);
             frame3.add(calculateButton);
 
 
-            frame2.setSize(300, 150);
-            frame2.setVisible(true);
+            frame3.setSize(300, 150);
+            frame3.setVisible(true);
             // Existing code...
 
 
-            frame.add(potentialEnergyButton);
+
 
             calculateButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     // Parse mass and height values from text fields
-                    double mass = Double.parseDouble(massField.getText());
-                    double height = Double.parseDouble(heightField.getText());
-                    double gravity = Double.parseDouble(gravityField.getText());
+                    double mass = Double.parseDouble(massField4.getText());
+                    double height = Double.parseDouble(heightField6.getText());
+                    double gravity = Double.parseDouble(gravityField5.getText());
 
                     // Calculate potential energy using constant gravity
                     double potentialEnergy = mass * gravity * height;
@@ -122,4 +131,4 @@ public class PhysicsUI {
 
 
 }
-}
+
