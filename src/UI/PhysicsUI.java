@@ -16,7 +16,7 @@ public class PhysicsUI {
     JButton energy2 = new JButton("POTENTIAL ENERGY");
 
     JButton energy3 = new JButton("KINETIC ENERGY");
-    JLabel text = new JLabel("GET READY TO CALCULATE");
+
 
 
 
@@ -30,7 +30,7 @@ public class PhysicsUI {
         frame.add(energy);
         frame.add(energy2);
         frame.add(energy3);
-        frame.add(text);
+
 
 
 
