@@ -8,7 +8,7 @@ import java.awt.Color;
 
 
 public class PhysicsUI {
-    JFrame frame = new JFrame("Assignment");
+    JFrame frame = new JFrame("ASSIGNMENT FOR PHYSICS CALCULATIONS");
 
 
     JButton energy = new JButton("FORCE");
