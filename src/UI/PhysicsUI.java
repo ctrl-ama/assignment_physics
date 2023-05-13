@@ -33,6 +33,24 @@ public class PhysicsUI {
         frame.add(text);
 
 
+        // Set background color for the frame
+        frame.getContentPane().setBackground(new Color(240, 240, 240)); // Light gray
+
+// Set background color for the buttons
+        energy.setBackground(new Color(200, 220, 230)); // Light blue
+        energy2.setBackground(new Color(220, 200, 230)); // Light purple
+        energy3.setBackground(new Color(230, 220, 200)); // Light yellow
+
+// Set text color for the buttons
+        energy.setForeground(Color.DARK_GRAY);
+        energy2.setForeground(Color.DARK_GRAY);
+        energy3.setForeground(Color.DARK_GRAY);
+
+// Set background color for the labels
+        text.setBackground(new Color(240, 240, 240)); // Light gray
+
+// Set text color for the labels
+        text.setForeground(Color.DARK_GRAY);
 
         energy.addActionListener(new ActionListener() {
             @Override
