@@ -7,9 +7,9 @@ public class physics {
          public double multiply (float numberOne, float numberTwo, float numberThree){
             return numberOne * numberTwo * numberThree;
         }
-     //    public float divide (float numberOne , float numberTwo){
-
-      //      return numberOne / numberTwo;
+     public double divide (float num1, float num2){
+             return num1 / num2;
+     }
         }
 
 

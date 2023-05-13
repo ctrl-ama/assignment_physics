@@ -19,7 +19,7 @@ public class PhysicsUI {
     JLabel text = new JLabel("GET READY TO CALCULATE");
 
     JTextField textField = new JTextField();
-    private String calculateKineticEnergy;
+
 
 
     public void MainUI() {
@@ -43,7 +43,9 @@ public class PhysicsUI {
 
         energy2.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {MainUI3();}
+            public void actionPerformed(ActionEvent e) {
+                MainUI3();
+            }
         });
         energy3.addActionListener(new ActionListener() {
             @Override
@@ -118,6 +120,7 @@ public class PhysicsUI {
             calculateButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    Gforce myObj = new Gforce();
                     // Parse mass and height values from text fields
                     double mass = Double.parseDouble(massField4.getText());
                     double height = Double.parseDouble(heightField6.getText());
@@ -141,7 +144,6 @@ public class PhysicsUI {
         JLabel text8 = new JLabel("  ENTER velocity:");
         JTextField textField7 = new JTextField();
         JTextField textField8 = new JTextField();
-        JTextField textField9 = new JTextField();
         JButton calculate2 = new JButton("calculate");
 
 
@@ -156,25 +158,19 @@ public class PhysicsUI {
         frame4.add(textField8);
         frame4.add(calculate2);
 
-
         calculate2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Gforce myObj = new Gforce();
                 // Parse mass and height values from text fields
                 double mass = Double.parseDouble(textField7.getText());
                 double velocity = Double.parseDouble(textField8.getText());
-                double k = Double.parseDouble(textField9.getText());
-
 
                 // Calculate potential energy using constant gravity
-                double potentialEnergy = mass * velocity * k;
+                double kineticEnergy = 0.5 * mass * Math.pow(velocity,2);
                 // Display the result
-
-                JOptionPane.showMessageDialog(null, "The kinetic energy is " + calculateKineticEnergy + " Joules");
+                JOptionPane.showMessageDialog(null, "The potential energy is " + kineticEnergy + " Joules");
             }
-
-
         });
 
     }
