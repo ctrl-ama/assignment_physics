@@ -46,12 +46,6 @@ public class PhysicsUI {
         energy2.setForeground(Color.DARK_GRAY);
         energy3.setForeground(Color.DARK_GRAY);
 
-// Set background color for the labels
-        text.setBackground(new Color(240, 240, 240)); // Light gray
-
-// Set text color for the labels
-        text.setForeground(Color.DARK_GRAY);
-
         energy.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
