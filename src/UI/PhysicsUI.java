@@ -18,7 +18,7 @@ public class PhysicsUI {
     JButton energy3 = new JButton("KINETIC ENERGY");
     JLabel text = new JLabel("GET READY TO CALCULATE");
 
-    JTextField textField = new JTextField();
+
 
 
 
@@ -31,7 +31,7 @@ public class PhysicsUI {
         frame.add(energy2);
         frame.add(energy3);
         frame.add(text);
-        frame.add(textField);
+
 
 
         energy.addActionListener(new ActionListener() {
@@ -67,7 +67,7 @@ public class PhysicsUI {
         JButton calculate = new JButton("Calculate");
 
         frame2.setSize(400, 400);
-        frame2.setLayout(new GridLayout(3, 1));
+        frame2.setLayout(new GridLayout(5, 2));
         frame2.setVisible(true);
 
 
@@ -102,7 +102,7 @@ public class PhysicsUI {
             JTextField heightField6 = new JTextField();
             JButton calculateButton = new JButton("Calculate");
 
-            frame3.setLayout(new GridLayout(3, 2));
+            frame3.setLayout(new GridLayout(5, 2));
             frame3.add(text4);
             frame3.add(massField4);
             frame3.add(text5);
@@ -112,7 +112,7 @@ public class PhysicsUI {
             frame3.add(calculateButton);
 
 
-            frame3.setSize(300, 150);
+            frame3.setSize(400, 400);
             frame3.setVisible(true);
             // Existing code...
 
@@ -147,8 +147,8 @@ public class PhysicsUI {
         JButton calculate2 = new JButton("calculate");
 
 
-        frame4.setSize(150, 200);
-        frame4.setLayout(new GridLayout(3, 1));
+        frame4.setSize(300, 300);
+        frame4.setLayout(new GridLayout(5, 2));
         frame4.setVisible(true);
 
 
