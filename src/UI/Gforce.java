@@ -7,7 +7,7 @@ public class Gforce {
         return (float) (m * g);
     }
 
-    // Code to cALc Potential Energy by bola
+    // Code to cALc Potential Energy
 
     // Define the calculatePotentialEnergy method.
     public static double calculatePotentialEnergy(double m, double h) {
@@ -17,7 +17,7 @@ public class Gforce {
 
     static float calculateKineticEnergy(float m, float v) {
         float k = 0.5f;
-        return m * v*k;
+        return m * v * k;
     }
 }
 
